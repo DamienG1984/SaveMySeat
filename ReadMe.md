@@ -72,20 +72,16 @@ A simple diagram showing the app's component design, in particular controllers a
 
 ## Web API Endpoint Reference
 
-Describe your web API.
-
-| HTTP Verb & Path |  Description |
-| -- | -- |
-| GET: /api/rests |return a list of Resturants |
-| POST: /api/rests |add a new Resturant |
-| POST: /api/rests/:id/upvotes |Update Resturant Upvotes|
-| POST: /api/rests/:id/downvotes |Update Resturant downvotes|
-| POST: /api/rests/:id/reviews | Create a Resturant Review|
-| POST: /api/rests/:id/bookings | Create a Resturant Reservation|
-| PUT: /api/rests/:id/UpdateSpaces | update Resturant Spaces |
-| POST: /api/rests/:rest_id/Reviews/:review_id/upvotes | Update Resturant Review Upvotes|
-| POST: /api/rests/:rest_id/Reviews/:review_id/downvotes | Update Resturant Review downvotes|
-| DELETE: /api/rests/:rest_id/bookings/:booking_id | delete a Resturant |
++ | GET: /api/rests |Returns a list of Resturants |
++ | POST: /api/rests |add a new Resturant |
++ | POST: /api/rests/:id/upvotes |Update Resturant Upvotes|
++ | POST: /api/rests/:id/downvotes |Update Resturant downvotes|
++ | POST: /api/rests/:id/reviews | Create a Resturant Review|
++ | POST: /api/rests/:id/bookings | Create a Resturant Reservation|
++ | PUT: /api/rests/:id/UpdateSpaces | update Resturant Spaces |
++ | POST: /api/rests/:rest_id/Reviews/:review_id/upvotes | Update Resturant Review Upvotes|
++ | POST: /api/rests/:rest_id/Reviews/:review_id/downvotes | Update Resturant Review downvotes|
++ | DELETE: /api/rests/:rest_id/bookings/:booking_id | delete a Resturant |
 
 
 ###Extra features
