@@ -1,0 +1,50 @@
+ <div class="row"> 
+  <div class="page-header">
+              <h1>Resturants</h1>
+            </div>
+   <div class="col-md-2">
+
+      <!--Sidebar content-->
+
+     <label> Search: <input ng-model="search.$"></label><br>
+     <label>Sort by:
+      <select ng-model="orderProp">
+        <option value="RestName">Alphabetical</option>
+        <option value="-upvotes">Highest Rating</option>
+        <option value="upvotes">Lowest Rating</option>
+      </select>
+    </label>
+    <label>Cuisine: 
+      <br> 
+      <select  ng-options="rest.Cuisine for rest in rests | unique:'Cuisine'" ng-model="Rests">
+      <option value>-- All --</option>
+
+    </select></label>
+    </div>
+
+
+    <div class="col-md-10">
+
+     <ul  class="Rests">
+        <li ng-repeat="rest in rests | filter:search  | orderBy:orderProp | filter:Rests || undefined" class="thumbnail">
+            <span class="main-text ">
+              <p>{{rest.RestName}}</p>
+            </span>
+            <p>{{rest.RestInfo}}</p>
+            <p><label>Cuisine: </label>{{rest.Cuisine}}<p>
+           <p><label>Address:</label>{{rest.Address}}</p>
+           <p><a href="#/rests/{{rest._id}}/Reviews">Reviews</a></P>
+            <p><a href="#/rests/{{rest._id}}/Bookings">Make A Reservation</a></p>
+            <p><a href="#/rests/{{rest._id}}/ViewBookings">View Reservations</a></p>
+            <span class="glyphicon glyphicon-thumbs-up"
+                     ng-click="incrementUpvotes(rest)"></span>
+                     {{rest.upvotes}}
+            <span class="glyphicon glyphicon-thumbs-down"
+                     ng-click="incrementdownvotes(rest)"></span>
+                     {{rest.downvotes}}
+        </li>
+      </ul>
+    </div>
+                        
+</div> 
+</div>

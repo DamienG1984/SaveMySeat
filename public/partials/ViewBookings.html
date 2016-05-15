@@ -1,0 +1,23 @@
+   <div class="col-md-8 col-md-offset-2">
+      <div class="page-header">
+        <h3>
+          <span>
+            {{rest.RestName}}
+          </span>
+        </h3>
+      </div>
+
+    <div class="col-md-10">
+
+         <div ng-repeat="booking in rest.bookings | orderBy:'date'" class = "thumbnail">
+          <p><label>Date: </label> {{booking.date}} </p>
+          <p><label>Time: </label> {{booking.times}} </p>
+          <p><label>Name: </label> {{booking.Name}} </p>
+          <p><label>Email: </label> {{booking.Email}} </p>
+          <p><label>People: </label> {{booking.People}} </p> 
+         <p><button type="submit" class="btn btn-primary" ng-click="deleteBooking (booking)">Delete Resturant</button>  </p>
+        </div>
+ 
+    </div>
+
+</div>

@@ -1,0 +1,49 @@
+   <div class="col-md-8 col-md-offset-2">
+      <div class="page-header">
+        <h2>
+          <span>
+            {{rest.RestName}}
+          </span>
+        </h2>
+          <p>
+            <label>Tables: </label> {{rest.Spaces}} 
+        </p>
+        <p><em>Please Enter you Details below and you should recieve a confirmation email confirming your booking shortly</em></p>
+        
+      </div>
+
+      <form ng-submit="addBooking()"
+        style="margin-top:30px;">
+        <h3>Reserve a Table</h3>
+        <div class="form-group">
+          <input type="date"
+          class="form-control"
+          placeholder="Date"
+          ng-model="book.date" required></input>
+        </div>
+        <div class="form-group">
+          <input type="time"
+          class="form-control"
+          placeholder="Time"
+          ng-model="book.times" required></input>
+        </div>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="Name"
+          ng-model="book.Name" required></input>
+        </div>
+        <div class="form-group">
+          <input type="email"
+          class="form-control"
+          placeholder="Email"
+          ng-model="book.Email" required></input>
+        </div>
+        <div class="form-group">
+          <input type= "number"
+          class="form-control"
+          placeholder="No Of People"
+          ng-model="book.People" required></input>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="incrementspaces(book)">Reserve</button>
+      </form>

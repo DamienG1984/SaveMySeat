@@ -1,0 +1,38 @@
+   <div class="col-md-8 col-md-offset-2">
+      <div class="page-header">
+        <h3>
+          <span>
+            {{rest.RestName}}
+          </span>
+        </h3>
+      </div>
+
+      <div ng-repeat="review in rest.reviews | orderBy:'-upvotes'">
+        <span class="glyphicon glyphicon-thumbs-up"
+          ng-click="incrementUpvotes(review)"></span>
+        {{review.upvotes}} 
+        <span class="glyphicon glyphicon-thumbs-down"
+           ng-click="incrementdownvotes(review)"></span>
+          {{review.downvotes}}  - by {{review.author}}
+        <span style="font-size:20px; margin-left:10px;">
+          {{review.body}}
+        </span>
+      </div>
+
+      <form ng-submit="addreview()"
+        style="margin-top:30px;">
+        <h3>Add a new Review</h3>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="review"
+          ng-model="review.body"></input>
+        </div>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="Author"
+          ng-model="review.author"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Review</button>
+      </form>
